@@ -1,0 +1,66 @@
+.hd-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 80px; /* Increased for bigger header */
+  background: #ffffff;
+  border-bottom: 1px solid #e5ecf3;
+  box-shadow: 0 2px 6px rgba(44, 62, 80, 0.05);
+}
+
+.hd-logo {
+  font-size: 2rem; /* larger font */
+  font-weight: 700;
+  color: #1d7ff2;
+}
+
+.hd-logo .dot {
+  color: #ff6b6b;
+}
+
+/* Grouping search and bell */
+.hd-center {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 32px;
+}
+
+/* Search styling */
+.hd-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #f1f6fd;
+  border-radius: 8px;
+  padding: 0 14px;
+  height: 48px;
+}
+
+.hd-search-icon {
+  font-size: 1.3rem;
+  color: #9aa6b9;
+}
+
+.hd-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 1rem;
+  color: #43536e;
+  cursor: default;
+}
+
+/* Profile */
+.hd-profile img {
+  width: 44px;
+  height: 44px;
+}
+
+.hd-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}

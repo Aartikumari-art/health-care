@@ -1,0 +1,47 @@
+.anatomy-container {
+  max-width: 300px;
+}
+
+.badge-heart {
+  top: 20%;
+  left: 58%;
+}
+
+.badge-leg {
+  bottom: 15%;
+  left: 25%;
+}
+
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .anatomy-container {
+      width: 250px;
+    }
+  
+    .badge-heart {
+      top: 130px;
+      left: 170px;
+    }
+  
+    .badge-leg {
+      bottom: 80px;
+      left: 5px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .anatomy-container {
+      width: 220px;
+    }
+  
+    .badge-heart {
+      top: 120px;
+      left: 150px;
+    }
+  
+    .badge-leg {
+      bottom: 70px;
+      left: 2px;
+    }
+  }
+  
