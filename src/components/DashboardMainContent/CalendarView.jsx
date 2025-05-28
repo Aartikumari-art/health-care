@@ -93,7 +93,7 @@ const CalendarView = () => {
             </div>
 
             <div
-              className="text-secondary fw-medium"
+              className="text-white fw-medium"
               style={{ fontSize: "0.95rem" }}
             >
               {a.time} - {a.doctor}
@@ -109,7 +109,10 @@ const CalendarView = () => {
             <div className="fw-bold">
               {a.icon} {a.title}
             </div>
-            <div style={{ fontSize: "1rem", fontWeight: "500" }}>
+            <div
+              className="text-secondary fw-medium"
+              style={{ fontSize: "0.95rem" }}
+            >
               {a.time} - {a.doctor}
             </div>
           </div>
