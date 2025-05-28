@@ -59,10 +59,5 @@
     background-color: #d8eaff;
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .sb-wrapper {
-      display: none; /* Hide sidebar on small screens */
-    }
-  }
+ 
   
