@@ -53,14 +53,18 @@
   cursor: default;
 }
 
-/* Profile */
 .hd-profile img {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .hd-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #2c3e50;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
 }
+

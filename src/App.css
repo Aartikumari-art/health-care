@@ -1,20 +1,13 @@
-/* src/styles/App.css */
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
-}
-
+/* Root layout */
 .app-root {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
+/* Main content wrapper */
 .main-container {
   display: flex;
   flex: 1;
@@ -22,15 +15,106 @@ body, html {
   overflow: hidden;
 }
 
-/* Sidebar will not scroll */
-.main-container > *:first-child {
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-/* Right panel scrolls vertically only */
-.main-container > *:last-child {
+/* Collapsed sidebar on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Dashboard content area */
+.dashboard-content {
   flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f8f9fa;
   overflow-y: auto;
-  overflow-x: hidden;
-  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Flex grid for health status cards */
+.status-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.status-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+/* Progress bar */
+.progress {
+  height: 6px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
+/* Typography */
+h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text-muted {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+/* Media queries for responsive padding */
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+
+  .status-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Scroll behavior for long content */
+.dashboard-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }

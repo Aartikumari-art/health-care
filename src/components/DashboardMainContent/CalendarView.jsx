@@ -5,7 +5,7 @@ const appointments = {
     {
       title: "Dentist",
       time: "09:00",
-      doctor: "Dr. Cameron Williamson",
+      doctor: "Dr. Ramanujan",
       icon: "🦷",
     },
   ],
@@ -30,7 +30,7 @@ const CalendarView = () => {
   while (calendarCells.length % 7 !== 0) calendarCells.push(null);
 
   return (
-    <div className="card p-4 shadow-sm">
+    <div className="card p-4 shadow-lg">
       <h5 className="mb-3 fw-bold">October 2021</h5>
 
       <div className="d-flex justify-content-between text-center mb-2">
@@ -91,9 +91,13 @@ const CalendarView = () => {
             <div className="fw-bold">
               {a.icon} {a.title}
             </div>
-            <small>
+
+            <div
+              className="text-secondary fw-medium"
+              style={{ fontSize: "0.95rem" }}
+            >
               {a.time} - {a.doctor}
-            </small>
+            </div>
           </div>
         ))}
         {appointments[29]?.map((a, i) => (
@@ -105,9 +109,9 @@ const CalendarView = () => {
             <div className="fw-bold">
               {a.icon} {a.title}
             </div>
-            <small>
+            <div style={{ fontSize: "1rem", fontWeight: "500" }}>
               {a.time} - {a.doctor}
-            </small>
+            </div>
           </div>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/activity.css"; // Import the CSS below
+import "../../styles/activity.css"; 
 
 const days = [
   { day: "Mon", count: 1, color: "#FF6384" },
@@ -13,16 +13,13 @@ const days = [
 
 export default function ActivityFeed() {
   return (
-    <div
-      className="activity-card card mt-4 p-2 shadow-lg"
-      style={{ maxWidth: "700px" }}
-    >
+    <div className="card p-4 shadow-lg mb-4">
       <div className="d-flex justify-content-between align-items-center mb-2">
         <h5 className="fw-bold mb-0">Activity</h5>
         <span className="text-muted small">This Week</span>
       </div>
 
-      <p className="text-muted mb-4 small">3 appointments this week</p>
+      <p className="text-muted mb-4 large">3 appointments this week</p>
 
       <div className="d-flex justify-content-between align-items-end activity-graph">
         {days.map(({ day, count, color }) => (

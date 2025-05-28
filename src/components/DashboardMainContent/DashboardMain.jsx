@@ -32,10 +32,8 @@ const DashboardMainContent = () => {
           </div>
         </div>
 
-        {/* RIGHT 50%: Calendar + Upcoming Schedule + SimpleAppointment */}
         <div className="col-md-6">
-          <div className="card bg-light p-3 h-100 d-flex flex-column justify-content-between">
-            {/* Calendar */}
+          <div className="p-3 h-100 d-flex flex-column justify-content-between">
             <div className="mb-4">
               <CalendarView />
             </div>
@@ -45,10 +43,7 @@ const DashboardMainContent = () => {
               <UpcomingSchedule />
             </div>
 
-            {/* Simple Appointment */}
-            <div>
-              <SimpleAppointmentCard />
-            </div>
+       
           </div>
         </div>
       </div>
