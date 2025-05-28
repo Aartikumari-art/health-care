@@ -7,4 +7,9 @@ export default defineConfig({
     host: true,
     port: process.env.PORT || 5173,
   },
+  preview: {
+    host: true,
+    port: process.env.PORT || 4173, 
+    allowedHosts: ["health-care-2-9p06.onrender.com"], 
+  },
 });
